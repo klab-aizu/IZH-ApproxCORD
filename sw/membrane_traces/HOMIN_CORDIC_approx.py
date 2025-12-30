@@ -28,7 +28,7 @@ def u2s17(v):
 # =================================
 # CORDIC multiply
 # =================================
-def cordic_mul_2tn(x, z, iterations=12, fpx=4, fpz=4):
+def cordic_mul(x, z, iterations=12, fpx=4, fpz=4):
     x = x * (1 << fpx)
     z = z * (1 << fpz)
 
@@ -108,7 +108,7 @@ def simulate_homin_neuron(d_float, iterations=12, t_max=1000, dt=0.03125):
 def plot_4_homin_behaviors():
     configs = [
         (8.0, "Regular Spiking"),
-        (5.0, "Initial Bursting"),
+        (5.0, "Intrinsically Bursting"),
         (1.125, "Chattering"),
         (0.375, "Low-Threshold Spiking")
     ]
