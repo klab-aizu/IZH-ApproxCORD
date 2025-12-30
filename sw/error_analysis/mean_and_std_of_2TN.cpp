@@ -1,15 +1,12 @@
 #include <iostream>
 #include <cstdint>
 #include <cmath>
-#include <limits>
+#include <fstream>
 
 extern "C" uint64_t add16se_2TN(uint64_t B, uint64_t A);
 
 int main() {
 
-    // =========================================
-    // FULL SEARCH: Compute gamma mean & std
-    // =========================================
     const uint64_t MAX = 1ULL << 16;
     const long double N = (long double)MAX * (long double)MAX;
 
@@ -33,7 +30,13 @@ int main() {
     long double var  = sum2 / N - mean * mean;
     long double std  = std::sqrt(var);
 
-    std::cout << "=== Approximate Adder (2TN) Statistics ===\n";
+    // ===== WRITE CSV =====
+    std::ofstream fout("adder_2TN.csv");
+    fout << "mean_gamma,std_gamma\n";
+    fout << (double)mean << "," << (double)std << "\n";
+    fout.close();
+
+    std::cout << "Saved adder_stats.csv\n";
     std::cout << "Mean(gamma) = " << (double)mean << "\n";
     std::cout << "Std(gamma)  = " << (double)std  << "\n";
 
