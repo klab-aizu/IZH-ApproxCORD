@@ -28,7 +28,7 @@ def u2s17(v):
 # =================================
 # CORDIC multiply
 # =================================
-def cordic_mul(x, z, iterations=12, fpx=4, fpz=4):
+def cordic_multiply_scaled(x, z, iterations=12, fpx=4, fpz=4):
     x = x * (1 << fpx)
     z = z * (1 << fpz)
 
@@ -71,7 +71,7 @@ def simulate_homin_neuron(d_float, iterations=12, t_max=1000, dt=0.03125):
         # v^2 via CORDIC
         v_q44 = q6_9_to_q4_4(v)
         v_f = v_q44 / (1 << 4)
-        v_sq_f = cordic_mul_2tn(v_f, v_f, iterations)
+        v_sq_f = cordic_multiply_scaled(v_f, v_f, iterations)
         v_sq = float_to_fixed(v_sq_f)
 
         # dv/dt
