@@ -6,4 +6,4 @@ Regular Spiking, Initial Bursting, Chattering, and Low-Threshold Spiking.
 
 Two implementations are provided:
 - HOMIN_exact_fixed_point.py: exact fixed-point arithmetic
-- HOMIN_CORDIC.py: CORDIC-based approximate arithmetic
+- HOMIN_CORDIC_approx.py: CORDIC-based approximate arithmetic
