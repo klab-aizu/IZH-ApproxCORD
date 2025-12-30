@@ -17,7 +17,7 @@ def fixed_to_float(val):
 def saturate16(x):
     return max(MIN_VAL, min(MAX_VAL, x))
 
-# === Chuyển đổi Q6.9 <-> Q4.4 ===
+# === Q6.9 <-> Q4.4 ===
 def q6_9_to_q4_4(v_q69):
     return v_q69 >> (FRAC_BITS - 4)
 
