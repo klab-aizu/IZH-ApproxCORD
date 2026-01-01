@@ -244,7 +244,7 @@ def export_mre_results_to_csv(filename="mre_results.csv"):
     """
     neuron_configs = [
         ("RS", 8.0, "Regular Spiking"),
-        ("IB", 5.0, "Intrinsically Bursting"),
+        ("IB", 5.0, "Initial Bursting"),
         ("CH", 1.125, "Chattering"),
         ("LTS", 0.375, "Low-Threshold Spiking"),
     ]
