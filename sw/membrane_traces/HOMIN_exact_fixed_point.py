@@ -93,7 +93,7 @@ def simulate_homin_neuron_fixed(d_float, t_max=1000, dt=0.03125):
 def plot_4_homin_behaviors_fixed():
     configs = [
         (8.0, "Regular Spiking"),
-        (5.0, "Intrinsically Bursting"),
+        (5.0, "Initial Bursting"),
         (1.125, "Chattering"),
         (0.375, "Low-Threshold Spiking")
     ]
