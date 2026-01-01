@@ -17,4 +17,4 @@ where  $l_{\text{model},i}$ are the spike times of the tested variant (CORDIC-ba
 
 The code employs Mean Relative Error (MRE) to quantitatively compare the spike timing of HOMIN_cordic_approx models with the standard HOMIN reference model.
 The evaluation is conducted for CORDIC iteration counts ranging from 4 to 16 across four HOMIN neuron behaviors: Regular Spiking, Initial Bursting, Chattering, and Low-Threshold Spiking, enabling an analysis of how iterative CORDIC approximation affects spike timing accuracy.
-![Iterations_barchart](Iterations_barchart.png)
+![Iterations_barchart](Iterations_barchart1.png)
