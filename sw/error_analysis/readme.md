@@ -14,6 +14,6 @@ The program computes the mean and standard deviation of the adder error, where t
 The computed statistical parameters are exported to a CSV file, which serves as the input for subsequent analysis.
 
 ## error_analysis_2TN.py
-This script run after adder_stats.cpp.
+This script run after mean_and_std_of_2TN.cpp.
 It reads the CSV file generated in the previous step and uses the extracted adder error statistics to perform a Monte-Carlo simulation of accumulated error in CORDIC-based computations.
 The simulation is carried out for CORDIC iteration counts ranging from 4 to 16, enabling the evaluation of how errors introduced by the 2TN approximate adder propagate and accumulate across multiple CORDIC iterations.
